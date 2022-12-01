@@ -20,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-  <title>Kevin Gerges</title>
+  <title>About-Kevin</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -49,13 +49,10 @@ justify-content: space-between;
 
 .topleft {
   position: absolute;
-  top: 24px;
+  top: 10px;
   left: 16px;
-  font-size: 23px;
-  color: #64d86b;
 }
 
-/*
 .bottomleft {
   position: absolute;
   bottom: 0;
@@ -68,7 +65,7 @@ justify-content: space-between;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-}*/
+}
 
 #header{
     background-image: url("money-heist-5-1200.jpeg");
@@ -124,7 +121,6 @@ justify-content: space-between;
         padding: 20px;
 /*        background-color: #ffdca4;*/
         float: left;
-        color: white;
     }
 #container {
     display: flex;
@@ -281,7 +277,7 @@ a{
     height: 100%;
     width: 100%;
     background-color: #000000;
-    border-left: 2px solid black;
+    border-left: 2px solid #4070F4;
     animation: animate 4s steps(12) infinite;
 }
 @keyframes animate{
@@ -293,8 +289,8 @@ a{
     }
 }
 
-.topleft {
-  color: #22b455;
+.topleft, .middle,  .bottomleft {
+  color: darkseagreen;
 }
 /*p {}*/
 .container22 {
@@ -319,7 +315,7 @@ a{
 
 .container22 p span.typed-text {
   font-weight: normal;
-  color: red;
+  color: #dd7732;
   font-size: 37px;
 }
 .container22 p span.cursor {
@@ -400,30 +396,23 @@ hr {
 .logos{
   color: white;
   position: relative;
-  top: -512px;
-  left: 1210px;
+/*  top: 18px;*/
 }
 p{
   font-weight: 900;
 }
-/*.topleft1{
-  position: relative;
-}
-*/@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 .content p {
-    color: white;
+    color: #826225;
     position: relative;
-    top: -148px;
-    left: 680px;
+    top: -149px;
+    left: 708px;
     font-size: 29px;
-    width: 1124px;
 }
-
 </style>
-</head>
-
 <body>
+
     <div id="header">
         <!-- <h1>Money Heist</h1> -->
     </div>
@@ -449,151 +438,15 @@ p{
 
 
 
-   <div class="topleft1">
-
-            <div class="logos">
-            <a href="https://github.com/Kevingerges"><i class="fa fa-github"style="font-size:28px;color:white;"></i></a>
-            <a href="https://www.linkedin.com/in/kevingerges/"><i class="fa fa-linkedin-square" style="font-size:28px;color:#0A66C2;"></i></a>
-            <a href="mailto:kevingerges47@gmail.com"><i class="fa fa-envelope" style="font-size:28px;color:white;"></i></a>
-    </div>
-
-
-    <div class="topleft">
-        <span class="text first-text"><strong>initializing....<strong></span>
-        <span class="text sec-text"></span>
-        <script>
-            const text = document.querySelector(".sec-text");
-            textLoad();
-            setInterval(textLoad, 12000);
-        </script>
-    </div>
-        <!-- <p> <strong> Intialzion </strong> </p>
-            <div class="logos">
+   <div class="topleft">
+        <p> <strong> &lt;strong&gt; Reach me here &lt;/strong&gt </strong> </p>
+       <!--  <div class="logos">
             <a href="https://github.com/Kevingerges"><i class="fa fa-github"style="font-size:28px;color:white;"></i></a>
             <a href="https://www.linkedin.com/in/kevingerges/"><i class="fa fa-linkedin-square" style="font-size:28px;color:#0A66C2;"></i></a>
             <a href="mailto:kevingerges47@gmail.com"><i class="fa fa-envelope" style="font-size:28px;color:white;"></i></a>
     </div> -->
+     </div>
 
-
-
-
-<div id="container">
-
-    <div class="container22">
-        <p>&lt; i'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
-
-        <script>
-
-            const typedTextSpan = document.querySelector(".typed-text");
-            const cursorSpan = document.querySelector(".cursor");
-
-            const textArray = ["student >", "developer >"];
-            const typingDelay = 200;
-            const erasingDelay = 100;
-            const newTextDelay = 100; // Delay between current and next text
-            let textArrayIndex = 0;
-            let charIndex = 0;
-
-            function type() {
-              if (charIndex < textArray[textArrayIndex].length) {
-                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, typingDelay);
-              }
-              else {
-                cursorSpan.classList.remove("typing");
-                setTimeout(erase, newTextDelay);
-              }
-            }
-
-            function erase() {
-              if (charIndex > 0) {
-                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-                charIndex--;
-                setTimeout(erase, erasingDelay);
-              }
-              else {
-                cursorSpan.classList.remove("typing");
-                textArrayIndex++;
-                if(textArrayIndex>=textArray.length) textArrayIndex=0;
-                setTimeout(type, typingDelay + 1100);
-              }
-            }
-
-            document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-              if(textArray.length) setTimeout(type, newTextDelay + 250);
-            });
-        </script>
-    </div>
-
-
-    <div class="middle">
-        <!-- <h1>COMING SOON</h1> -->
-        <!-- <hr> -->
-        <p id="demo" style="font-size:30px"></p>
-    </div>
-    <!-- <div class="bottomleft">
-        <p>Under Construction</p>
-    </div> -->
-
-
-
-
-    <!-- <div class="clearfloat"></div>
-        </div>
-     -->
-
-    <div class="content">
-        <!-- <h2> About</h2> -->
-        <p> hello my name is <span style="color:#34e2e2;"> Kevin Gerges <br></span>i'm a  <span style="color:#34e2e2;"> second year </span> student <br> majoring in  <span style="color:#34e2e2;"> computer science</span> <br> at<storng><span style="color:#34e2e2;"> <strong> USC</strong> </span>   </p>
-        <!-- <p>Hello<br> My Name Is </p> Kevin Gerges, <br> I'm a Second Year majoring <br> in Computer Science major <br>@ USC <br>  </p> -->
-    </div>
-
-
-
-    <div class="clearfloat">
-    </div>
-
-
-<section>
-  <div class="container reveal">
-    <div class="text-container">
-
-      <div class="text-box">
-        <h3> To be Completed</h3>
-         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-          eius molestiae perferendis eos provident vitae iste.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <script>
-    function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal);
-  </script>
-</section>
-
-</div>
 
 
  <div id="footer">
