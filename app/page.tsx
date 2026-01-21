@@ -142,13 +142,12 @@ export default function Home() {
   const connectInView = useInView(connectRef, { once: true, margin: "-100px" });
 
   useEffect(() => {
-    // Check for saved preference or system preference
+    // Check for saved preference only (white mode is default)
     const saved = localStorage.getItem('darkMode');
     if (saved !== null) {
       setDarkMode(saved === 'true');
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setDarkMode(true);
     }
+    // Removed system preference check - white mode is always default
   }, []);
 
   useEffect(() => {
@@ -164,11 +163,11 @@ export default function Home() {
     <main className={`min-h-screen overflow-x-hidden transition-colors duration-300 ${darkMode ? 'bg-neutral-950 text-white' : 'bg-gradient-to-br from-blue-50/60 via-white to-blue-50/40 text-neutral-900'}`}>
       {/* Grid Pattern Background */}
       <div
-        className={`fixed inset-0 pointer-events-none z-0 ${darkMode ? 'opacity-5' : 'opacity-30'}`}
+        className={`fixed inset-0 pointer-events-none z-0 ${darkMode ? 'opacity-20' : 'opacity-60'}`}
         style={{
           backgroundImage: `
-            linear-gradient(${darkMode ? 'rgba(255,255,255,0.05)' : 'rgba(59, 130, 246, 0.08)'} 1px, transparent 1px),
-            linear-gradient(90deg, ${darkMode ? 'rgba(255,255,255,0.05)' : 'rgba(59, 130, 246, 0.08)'} 1px, transparent 1px)
+            linear-gradient(${darkMode ? 'rgba(255,255,255,0.15)' : 'rgba(59, 130, 246, 0.25)'} 1px, transparent 1px),
+            linear-gradient(90deg, ${darkMode ? 'rgba(255,255,255,0.15)' : 'rgba(59, 130, 246, 0.25)'} 1px, transparent 1px)
           `,
           backgroundSize: '80px 80px',
         }}
