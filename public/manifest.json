@@ -1,0 +1,21 @@
+{
+    "name": "Kevin Gerges",
+    "short_name": "Kevin G",
+    "description": "Software Engineer at Meta building privacy-compliant infrastructure and AI-powered automation. Expertise in distributed systems, data pipelines, and machine learning.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0668E1",
+    "icons": [
+        {
+            "src": "/img/fav.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "/img/fav.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg"
+        }
+    ]
+}

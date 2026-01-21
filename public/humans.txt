@@ -1,0 +1,17 @@
+# humans.txt
+# https://humanstxt.org/
+
+/* AUTHOR */
+Name: Kevin Gerges
+Site: https://kevingerges.com
+Email: kevingerges00@gmail.com
+GitHub: https://github.com/Kevingerges
+LinkedIn: https://www.linkedin.com/in/kevingerges/
+Location: Menlo Park, CA
+
+/* SITE */
+Last update: 2026/01
+Language: English
+Standards: HTML5, CSS3, JavaScript
+Framework: Next.js 14
+Hosting: GitHub Pages

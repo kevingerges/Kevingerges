@@ -1,0 +1,32 @@
+# Kevin Gerges - Software Engineer
+
+> Software Engineer at Meta building privacy-compliant infrastructure and AI-powered automation.
+
+## About
+Kevin Gerges is a Software Engineer at Meta and Computer Science graduate from USC. He builds software that understands people, designing systems that model human thought—how we remember, search, and construct meaning.
+
+## Current Role
+- **Company**: Meta
+- **Position**: Software Engineer
+- **Focus**: Privacy Engineering, AI/ML, Data Pipelines, Infrastructure
+- **Location**: Menlo Park, CA
+
+## Work Experience
+- **Meta** (Aug 2025 - Present): Software Engineer - Privacy compliance infrastructure, AI-powered automation
+- **Mercor** (Mar 2025 - Jul 2025): Software Engineer - LLM Evaluation
+- **Scale AI** (Nov 2024 - Feb 2025): Software Engineer - GenAI Platform
+- **LinkedIn** (May 2024 - Aug 2024): Software Engineer Intern - Revenue Attribution, Data Pipelines
+- **Bloomberg** (May 2023 - Aug 2023): Software Engineering Fellow
+- **NASA** (Mar 2022 - Aug 2022): Embedded Software Engineering Intern - Autonomous systems, ML
+
+## Education
+- **University of Southern California (USC)** - Computer Science
+
+## Skills
+Python, AI/ML, Data Pipelines, Privacy Engineering, LLM Evaluation, Spark, Hadoop, Scala, React, Next.js, NLP, Multi-Agent Systems, Human-Centered AI
+
+## Contact
+- Website: https://kevingerges.com
+- GitHub: https://github.com/Kevingerges
+- LinkedIn: https://www.linkedin.com/in/kevingerges/
+- Email: kevingerges00@gmail.com
