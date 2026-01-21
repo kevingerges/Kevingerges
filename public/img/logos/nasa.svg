@@ -1,0 +1,13 @@
+<svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <!-- NASA Meatball Logo -->
+  <circle cx="18" cy="18" r="17" fill="#0B3D91"/>
+  <!-- Orbit ring -->
+  <ellipse cx="18" cy="18" rx="14" ry="5" fill="none" stroke="white" stroke-width="1.2" transform="rotate(-20 18 18)"/>
+  <!-- Red chevron -->
+  <path d="M8 20 L18 10 L21 13 L14 20 L21 27 L18 30 Z" fill="#FC3D21"/>
+  <!-- White swoosh/vector -->
+  <path d="M6 18 Q10 8, 30 14" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <!-- Stars -->
+  <circle cx="28" cy="8" r="1.5" fill="white"/>
+  <circle cx="8" cy="10" r="1" fill="white"/>
+</svg>

@@ -1,0 +1,343 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Google Font - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 9%;
+    --radius: 0.75rem;
+    
+    /* Light theme accent - soft blue */
+    --glow-color: 210 100% 60%;
+  }
+
+  .dark {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.03em;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   BACKGROUND GRID PATTERN
+   ============================================ */
+
+.bg-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ============================================
+   BLUE EDGE GLOW EFFECTS
+   ============================================ */
+
+.edge-glow-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  background: radial-gradient(ellipse at left center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.edge-glow-right {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  background: radial-gradient(ellipse at right center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   PREMIUM BUTTON STYLES (AutoAI-inspired)
+   ============================================ */
+
+.btn-premium {
+  position: relative;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Solid black primary button */
+.btn-primary-solid {
+  background: #171717;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary-solid:hover {
+  background: #262626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Outline secondary button */
+.btn-secondary-outline {
+  background: #fff;
+  color: #171717;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary-outline:hover {
+  background: #fafafa;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   LIGHT CARD STYLES
+   ============================================ */
+
+.card-light {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.card-light:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================
+   INPUT STYLES (Light Theme)
+   ============================================ */
+
+.input-premium {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: #171717;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.input-premium::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.input-premium:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* ============================================
+   TAG/BADGE STYLES (Light Theme)
+   ============================================ */
+
+.tag-premium {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #525252;
+  transition: all 0.2s ease;
+}
+
+.tag-premium:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+
+/* ============================================
+   SECTION STYLES
+   ============================================ */
+
+.section-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #171717;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #737373;
+  letter-spacing: -0.01em;
+}
+
+/* Success indicator */
+.check-green {
+  color: #10b981;
+}
+
+/* ============================================
+   SCROLLBAR STYLING (Light)
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
+
+/* ============================================
+   SELECTION STYLING (Light)
+   ============================================ */
+
+::selection {
+  background: rgba(59, 130, 246, 0.2);
+  color: #171717;
+}
+
+/* ============================================
+   STAT NUMBER STYLING
+   ============================================ */
+
+.stat-number {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #171717;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #737373;
+}
+
+/* ============================================
+   LABEL STYLING (Uppercase small)
+   ============================================ */
+
+.label-uppercase {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a3a3a3;
+}
+
+/* ============================================
+   ANIMATED GRADIENT TEXT (Subtle for light)
+   ============================================ */
+
+.animate-gradient-text {
+  background: linear-gradient(
+    135deg,
+    #171717 0%,
+    #525252 50%,
+    #171717 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ============================================
+   IMAGE EFFECTS (Light)
+   ============================================ */
+
+.image-hover {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-hover img {
+  transition: transform 0.5s ease;
+}
+
+.image-hover:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   COMPANY BRAND COLORS (Muted for light theme)
+   ============================================ */
+
+.brand-meta { color: #0668E1; }
+.brand-linkedin { color: #0077b5; }
+.brand-kaiser { color: #8b5cf6; }
+.brand-nasa { color: #f97316; }
